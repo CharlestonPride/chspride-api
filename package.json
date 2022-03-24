@@ -1,9 +1,11 @@
 {
-  "name": "",
+  "name": "Chspride Api",
   "version": "",
   "description": "",
-  "scripts" : {
+  "scripts": {
     "test": "echo \"No tests yet...\""
   },
-  "author": ""
+  "dependencies": {
+    "@sendgrid/mail": "^7.6.1"
+  }
 }

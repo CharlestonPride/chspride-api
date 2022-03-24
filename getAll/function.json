@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": ["get"],
+      "route": "{collection}"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "in",
+      "name": "documents",
+      "databaseName": "ChsPride",
+      "collectionName": "{collection}",
+      "connectionStringSetting": "CosmosDbConnectionString",
+      "sqlQuery": "SELECT * FROM c where c.envId = 'chspride'"
+    }
+  ]
+}
